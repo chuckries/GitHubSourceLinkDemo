@@ -28,4 +28,4 @@ jobs:
     - name: Package
       run: dotnet pack --configuration Release GitHubSourceLinkDemo.csproj
     - name: Publish
-      run: dotnet nuget push bin/Release/GitHubSourceLinkDemo.nupkg
+      run: dotnet nuget push bin/Release/GitHubSourceLinkDemo.*.nupkg
