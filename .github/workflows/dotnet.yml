@@ -23,6 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Package
-      run: dotnet pack -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg --configuration Release --version-suffix ${{github.run_number}} GitHubSourceLinkDemo.csproj
+      run: dotnet pack -p:IncludeSymbols=true -p:SymbolPackageFormat=snupkg --configuration Release --version-suffix "CI-${{github.run_number}}" GitHubSourceLinkDemo.csproj
     - name: Publish
       run: dotnet nuget push --api-key "${{secrets.NUGET_ORG_PUSH_SECRET}}" --source "https://api.nuget.org/v3/index.json" bin\Release\GitHubSourceLinkDemo.*.nupkg bin\Release\GitHubSourceLinkDemo.*.snupkg
