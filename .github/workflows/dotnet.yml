@@ -20,7 +20,11 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_ORG_PUSH_SECRET}}
     - name: Restore dependencies
       run: dotnet restore
     - name: Package
       run: dotnet pack --configuration Release GitHubSourceLinkDemo.csproj
+    - name: Publish
+      run: dotnet nuget push bin/Release/GitHubSourceLinkDemo.nupkg
