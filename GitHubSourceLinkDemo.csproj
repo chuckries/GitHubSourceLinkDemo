@@ -4,6 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    
+    <!-- This is just to make versioning easier as I accidentally published 1.0.0 so all the pre-release 1.0.0-*'s are considered older -->
+    <VersionPrefix>2.0.0</VersionPrefix>
   </PropertyGroup>
 
 </Project>
