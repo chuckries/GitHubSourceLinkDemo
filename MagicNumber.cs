@@ -1,8 +1,8 @@
 namespace GitHubSourceLinkDemo;
 
-class MagicNumber 
+public class MagicNumber 
 {
-    static int DoMagic(int n)
+    public static int DoMagic(int n)
     {
         int result = 0;
 
